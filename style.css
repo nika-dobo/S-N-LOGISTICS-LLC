@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Public Sans", sans-serif;
+  background-color: #f5f8fd;
+}
+
+header {
+  background-color: white;
+  width: 100%;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+header .logo-box {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+header .logo-box .logo {
+  width: 120px;
+}
+
+header .Links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+header .Links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+}
+
+header .Links a:hover {
+  text-decoration: underline black 2px;
+}
+
+header .Links a:active {
+  transform: scale(0.95);
+}
+
+header .Links div {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+header .Links #select-leng {
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
