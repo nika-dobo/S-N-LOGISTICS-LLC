@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: "Public Sans", sans-serif;
-  background-color: #f5f8fd;
+  background-color: #d0efff;
 }
 
 header {
@@ -23,6 +23,9 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
+  border-bottom: 1px solid #00000038;
+  position: sticky;
+  top: 0;
 }
 
 header .logo-box {
@@ -70,4 +73,218 @@ header .Links #select-leng {
   border: none;
   font-size: 1.1rem;
   cursor: pointer;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.s-1 {
+  width: 100%;
+  background-color: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+}
+
+.s-1 h1 {
+  font-size: 3.5rem;
+}
+
+.s-1 h2 {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.s-1 p {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.s-1 div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.s-1 div button {
+  padding: 15px 35px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.s-1 div a:first-child button {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.s-1 div a:first-child button:hover {
+  background-color: #1d4ed8;
+}
+
+.s-1 div a:first-child button:active {
+  transform: scale(0.95);
+}
+
+.s-1 div a:last-of-type button {
+  background-color: #ffffff;
+  border: #2563eb 2px solid;
+  color: #2563eb;
+}
+
+.s-1 div a:last-of-type button:hover {
+  background-color: #f7f9fc;
+}
+
+.s-1 div a:last-of-type button:active {
+  transform: scale(0.95);
+}
+
+.servise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 100px;
+}
+
+.servise h1 {
+  font-size: 2.3rem;
+}
+
+.servise .info {
+  margin-bottom: 50px;
+}
+
+.servise .main {
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  gap: 25px;
+}
+
+.servise .main .box {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.servise .main .box div {
+  width: 60px;
+  height: 60px;
+  background-color: #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.servise .main .box div img {
+  width: 35px;
+}
+
+.servise .main .box h3 {
+  font-size: 1.3rem;
+}
+
+.servise .main .box p {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.servise .main .box ul {
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.servise .main .box ul li {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.Gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.Gallery h1 {
+  font-size: 2.3rem;
+}
+
+.Gallery p {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.picture {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.picture div {
+  width: 350px;
+  height: 225px;
+  background-color: red;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 10px;
+  gap: 5px;
+  position: relative;
+}
+
+.picture div h4 {
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+.picture div p {
+  color: #fff;
+  z-index: 1;
+}
+
+.picture div:hover img {
+  transform: scale(1.05);
+}
+
+.picture div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s all;
+  z-index: 0;
+  filter: brightness(70%);
 }
