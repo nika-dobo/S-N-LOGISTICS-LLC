@@ -13,20 +13,29 @@
       >
 
       <div class="Links">
-        <a href="#">home</a>
-        <a href="/webs/AboutUs.html">About Us</a>
-        <a href="/webs/Links.html">Links</a>
-        <a href="/webs/Blogs.html">Blogs</a>
+        <img
+          src="images/icons/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""
+          id="burger-menu"
+        />
+        <div class="link">
+          <a href="#" style="text-decoration: underline" data-key="nav_home"
+            >Home</a
+          >
+          <a href="/webs/AboutUs.html" data-key="nav_about">About Us</a>
+          <a href="/webs/Links.html" data-key="nav_links">Links</a>
+          <a href="/webs/Blogs.html" data-key="nav_blogs">Blogs</a>
+        </div>
 
-        <div>
+        <div class="leng">
           <img
             src="images/icons/public_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
             alt=""
           />
           <select name="" id="select-leng">
-            <option value="">Geo</option>
-            <option value="" selected>Eng</option>
-            <option value="">Rus</option>
+            <option value="ka">Geo</option>
+            <option value="en" selected>Eng</option>
+            <option value="ru">Rus</option>
           </select>
         </div>
       </div>
@@ -34,21 +43,27 @@
 
     <main>
       <section class="s-1">
-        <h1>S&N LOGISTICS LLC</h1>
-        <h2>Your Trusted Partner in International Shipping</h2>
-        <p>
+        <h1 data-key="hero_title">S&N LOGISTICS LLC</h1>
+        <h2 data-key="hero_subtitle">
+          Your Trusted Partner in International Shipping
+        </h2>
+        <p data-key="hero_desc">
           We provide comprehensive logistics solutions for air, sea, rail, and
           road freight worldwide.
         </p>
         <div>
-          <a href=""><button class="">Get Started</button></a>
-          <a href="webs/AboutUs.html"><button class="">Learn More</button></a>
+          <a href="#contacts"
+            ><button class="" data-key="btn_started">Get Started</button></a
+          >
+          <a href="webs/AboutUs.html"
+            ><button class="" data-key="btn_learn">Learn More</button></a
+          >
         </div>
       </section>
 
-      <section class="servise">
-        <h1>Our Services</h1>
-        <p class="info">
+      <section class="servise" style="padding: 0px 10px">
+        <h1 data-key="serv_main_title">Our Services</h1>
+        <p class="info" data-key="serv_main_desc">
           Comprehensive shipping solutions tailored to your needs
         </p>
 
@@ -60,13 +75,15 @@
                 alt=""
               />
             </div>
-            <h3>Sea Freight</h3>
-            <p>Cost-effective ocean shipping for large cargo volumes</p>
+            <h3 data-key="serv_sea_title">Sea Freight</h3>
+            <p data-key="serv_sea_desc">
+              Cost-effective ocean shipping for large cargo volumes
+            </p>
             <ul>
-              <li>FCL & LCL Shipments</li>
-              <li>Port to Port / Door to Door</li>
-              <li>Customs Clearance</li>
-              <li>Cargo Insurance</li>
+              <li data-key="serv_sea_li1">FCL & LCL Shipments</li>
+              <li data-key="serv_sea_li2">Port to Port / Door to Door</li>
+              <li data-key="serv_sea_li3">Customs Clearance</li>
+              <li data-key="serv_sea_li4">Cargo Insurance</li>
             </ul>
           </div>
 
@@ -77,15 +94,15 @@
                 alt=""
               />
             </div>
-            <h3>Air Freight</h3>
-            <p>
+            <h3 data-key="serv_air_title">Air Freight</h3>
+            <p data-key="serv_air_desc">
               Fast and reliable air transportation for time-sensitive shipments
             </p>
             <ul>
-              <li>Express Delivery</li>
-              <li>Consolidated Cargo</li>
-              <li>Dangerous Goods Handling</li>
-              <li>Real-time Tracking</li>
+              <li data-key="serv_air_li1">Express Delivery</li>
+              <li data-key="serv_air_li2">Consolidated Cargo</li>
+              <li data-key="serv_air_li3">Dangerous Goods Handling</li>
+              <li data-key="serv_air_li4">Real-time Tracking</li>
             </ul>
           </div>
 
@@ -96,13 +113,15 @@
                 alt=""
               />
             </div>
-            <h3>Rail Freight</h3>
-            <p>Efficient rail transport across continents</p>
+            <h3 data-key="serv_rail_title">Rail Freight</h3>
+            <p data-key="serv_rail_desc">
+              Efficient rail transport across continents
+            </p>
             <ul>
-              <li>Container Transport</li>
-              <li>Intermodal Services</li>
-              <li>Cross-border Delivery</li>
-              <li>Cost-effective Solutions</li>
+              <li data-key="serv_rail_li1">Container Transport</li>
+              <li data-key="serv_rail_li2">Intermodal Services</li>
+              <li data-key="serv_rail_li3">Cross-border Delivery</li>
+              <li data-key="serv_rail_li4">Cost-effective Solutions</li>
             </ul>
           </div>
 
@@ -113,21 +132,23 @@
                 alt=""
               />
             </div>
-            <h3>Road Freight</h3>
-            <p>Flexible door-to-door delivery solutions</p>
+            <h3 data-key="serv_road_title">Road Freight</h3>
+            <p data-key="serv_road_desc">
+              Flexible door-to-door delivery solutions
+            </p>
             <ul>
-              <li>Local & International</li>
-              <li>Temperature Controlled</li>
-              <li>Specialized Transport</li>
-              <li>Last-mile Delivery</li>
+              <li data-key="serv_road_li1">Local & International</li>
+              <li data-key="serv_road_li2">Temperature Controlled</li>
+              <li data-key="serv_road_li3">Specialized Transport</li>
+              <li data-key="serv_road_li4">Last-mile Delivery</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="Gallery">
-        <h1>Gallery</h1>
-        <p>Our operations around the world</p>
+      <section class="Gallery" style="padding: 0px 10px">
+        <h1 data-key="gal_title">Gallery</h1>
+        <p data-key="gal_desc">Our operations around the world</p>
 
         <div class="picture">
           <div>
@@ -135,9 +156,8 @@
               src="images/WhatsApp Image 2026-01-27 at 12.43.53 AM.jpeg"
               alt=""
             />
-
-            <h4>Cargo Loading</h4>
-            <p>Secure packaging solutions</p>
+            <h4 data-key="gal_img1_title">Cargo Loading</h4>
+            <p data-key="gal_img1_desc">Secure packaging solutions</p>
           </div>
 
           <div>
@@ -145,9 +165,8 @@
               src="images/WhatsApp Image 2026-01-27 at 12.43.54 AM.jpeg"
               alt=""
             />
-
-            <h4>Container Stuffing</h4>
-            <p>Professional cargo handling</p>
+            <h4 data-key="gal_img2_title">Container Stuffing</h4>
+            <p data-key="gal_img2_desc">Professional cargo handling</p>
           </div>
 
           <div>
@@ -155,9 +174,8 @@
               src="images/WhatsApp Image 2026-01-27 at 12.43.54 AM (1).jpeg"
               alt=""
             />
-
-            <h4>Quality Inspection</h4>
-            <p>Safety and compliance checks</p>
+            <h4 data-key="gal_img3_title">Quality Inspection</h4>
+            <p data-key="gal_img3_desc">Safety and compliance checks</p>
           </div>
 
           <div>
@@ -165,9 +183,8 @@
               src="images/WhatsApp Image 2026-01-27 at 12.58.48 AM.jpeg"
               alt=""
             />
-
-            <h4>Heavy Equipment Transport</h4>
-            <p>Specialized machinery shipping</p>
+            <h4 data-key="gal_img4_title">Heavy Equipment Transport</h4>
+            <p data-key="gal_img4_desc">Specialized machinery shipping</p>
           </div>
 
           <div>
@@ -175,9 +192,8 @@
               src="images/WhatsApp Image 2026-01-27 at 12.48.34 AM.jpeg"
               alt=""
             />
-
-            <h4>Vehicle Logistics</h4>
-            <p>Safe automobile transportation</p>
+            <h4 data-key="gal_img5_title">Vehicle Logistics</h4>
+            <p data-key="gal_img5_desc">Safe automobile transportation</p>
           </div>
 
           <div>
@@ -185,20 +201,19 @@
               src="images/WhatsApp Image 2026-01-27 at 12.43.55 AM (1).jpeg"
               alt=""
             />
-
-            <h4>Cargo Supervision</h4>
-            <p>Expert loading monitoring</p>
+            <h4 data-key="gal_img6_title">Cargo Supervision</h4>
+            <p data-key="gal_img6_desc">Expert loading monitoring</p>
           </div>
         </div>
       </section>
 
-      <section class="contacts">
-        <h1>Get in Touch</h1>
-        <p>Have questions? We'd love to hear from you.</p>
+      <section class="contacts" id="contacts" style="padding: 0px 10px">
+        <h1 data-key="cont_title">Get in Touch</h1>
+        <p data-key="cont_desc">Have questions? We'd love to hear from you.</p>
 
         <div class="main">
           <div class="left">
-            <h2>Contact Information</h2>
+            <h2 data-key="cont_info_title">Contact Information</h2>
             <div class="box">
               <div class="img">
                 <img
@@ -207,7 +222,7 @@
                 />
               </div>
               <div class="info">
-                <h4>Address</h4>
+                <h4 data-key="cont_addr_label">Address</h4>
                 <p>+995 505 55 55 33</p>
               </div>
             </div>
@@ -220,7 +235,7 @@
                 />
               </div>
               <div class="info">
-                <h4>Phone</h4>
+                <h4 data-key="cont_phone_label">Phone</h4>
                 <p>snlogisticss504@gmail.com</p>
               </div>
             </div>
@@ -233,7 +248,7 @@
                 />
               </div>
               <div class="info">
-                <h4>Email</h4>
+                <h4 data-key="cont_email_label">Email</h4>
                 <p>9 April allay, N10, apartment 1, Poti, Georgia 4400</p>
               </div>
             </div>
@@ -250,7 +265,57 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="top">
+        <div class="left">
+          <div class="first">
+            <a href="#" class="logo-box">
+              <img class="logo" src="images/logo.png" alt="" /> S&N LOGISTICS</a
+            >
+          </div>
+          <div class="second">
+            <h2 data-key="hero_title">S&N LOGISTICS LLC</h2>
+            <p data-key="hero_subtitle">
+              Your Trusted Partner in International Shipping
+            </p>
+          </div>
+        </div>
+
+        <div class="center">
+          <h3 data-key="footer_contact_title">Contact</h3>
+          <p>
+            <img
+              src="images/icons/location_on_24dp_D1D5DB_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            /><span data-key="footer_addr_val">Poti, Georgia</span>
+          </p>
+          <p>
+            <img
+              src="images/icons/call_24dp_D1D5DB_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />+995 505 55 55 33
+          </p>
+          <p>
+            <img
+              src="images/icons/mail_24dp_D1D5DB_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />snlogisticss504@gmail.com
+          </p>
+        </div>
+
+        <div class="right">
+          <h3 data-key="footer_links_title">Useful Links</h3>
+          <a href="/webs/AboutUs.html" data-key="nav_about">About Us</a>
+          <a href="/webs/Links.html" data-key="nav_links">Links</a>
+          <a href="/webs/Blogs.html" data-key="nav_blogs">Blogs</a>
+        </div>
+      </div>
+      <div class="bottom">
+        <p data-key="footer_rights">
+          © 2026 S&N Logistics LLC. All rights reserved.
+        </p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
