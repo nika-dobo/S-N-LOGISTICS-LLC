@@ -1,13 +1,10 @@
-// 1. თარგმანების ბაზა (ლექსიკონი)
 const translations = {
   en: {
-    // Navigation
     nav_home: "Home",
     nav_about: "About Us",
     nav_links: "Links",
     nav_blogs: "Blogs",
 
-    // Hero Section
     hero_title: "S&N LOGISTICS LLC",
     hero_subtitle: "Your Trusted Partner in International Shipping",
     hero_desc:
@@ -15,11 +12,9 @@ const translations = {
     btn_started: "Get Started",
     btn_learn: "Learn More",
 
-    // Services Main
     serv_main_title: "Our Services",
     serv_main_desc: "Comprehensive shipping solutions tailored to your needs",
 
-    // Sea Freight
     serv_sea_title: "Sea Freight",
     serv_sea_desc: "Cost-effective ocean shipping for large cargo volumes",
     serv_sea_li1: "FCL & LCL Shipments",
@@ -27,7 +22,6 @@ const translations = {
     serv_sea_li3: "Customs Clearance",
     serv_sea_li4: "Cargo Insurance",
 
-    // Air Freight
     serv_air_title: "Air Freight",
     serv_air_desc:
       "Fast and reliable air transportation for time-sensitive shipments",
@@ -36,7 +30,6 @@ const translations = {
     serv_air_li3: "Dangerous Goods Handling",
     serv_air_li4: "Real-time Tracking",
 
-    // Rail Freight
     serv_rail_title: "Rail Freight",
     serv_rail_desc: "Efficient rail transport across continents",
     serv_rail_li1: "Container Transport",
@@ -44,7 +37,6 @@ const translations = {
     serv_rail_li3: "Cross-border Delivery",
     serv_rail_li4: "Cost-effective Solutions",
 
-    // Road Freight
     serv_road_title: "Road Freight",
     serv_road_desc: "Flexible door-to-door delivery solutions",
     serv_road_li1: "Local & International",
@@ -52,7 +44,6 @@ const translations = {
     serv_road_li3: "Specialized Transport",
     serv_road_li4: "Last-mile Delivery",
 
-    // Gallery
     gal_title: "Gallery",
     gal_desc: "Our operations around the world",
     gal_img1_title: "Cargo Loading",
@@ -68,7 +59,6 @@ const translations = {
     gal_img6_title: "Cargo Supervision",
     gal_img6_desc: "Expert loading monitoring",
 
-    // Contact Section
     cont_title: "Get in Touch",
     cont_desc: "Have questions? We'd love to hear from you.",
     cont_info_title: "Contact Information",
@@ -76,7 +66,6 @@ const translations = {
     cont_phone_label: "Phone",
     cont_email_label: "Email",
 
-    // Footer
     footer_contact_title: "Contact",
     footer_addr_val: "Poti, Georgia",
     footer_links_title: "Useful Links",
@@ -84,13 +73,11 @@ const translations = {
   },
 
   ka: {
-    // ნავიგაცია
     nav_home: "მთავარი",
     nav_about: "ჩვენს შესახებ",
     nav_links: "ბმულები",
     nav_blogs: "ბლოგი",
 
-    // მთავარი სექცია
     hero_title: "S&N LOGISTICS LLC",
     hero_subtitle: "თქვენი სანდო პარტნიორი საერთაშორისო გადაზიდვებში",
     hero_desc:
@@ -98,11 +85,9 @@ const translations = {
     btn_started: "დაწყება",
     btn_learn: "ვრცლად",
 
-    // სერვისები
     serv_main_title: "ჩვენი სერვისები",
     serv_main_desc: "თქვენს საჭიროებებზე მორგებული სრული გადაზიდვის სერვისი",
 
-    // საზღვაო
     serv_sea_title: "საზღვაო გადაზიდვა",
     serv_sea_desc: "ეფექტური საზღვაო გადაზიდვა დიდი მოცულობის ტვირთებისთვის",
     serv_sea_li1: "FCL და LCL გადაზიდვები",
@@ -110,7 +95,6 @@ const translations = {
     serv_sea_li3: "საბაჟო გაფორმება",
     serv_sea_li4: "ტვირთის დაზღვევა",
 
-    // საჰაერო
     serv_air_title: "საჰაერო გადაზიდვა",
     serv_air_desc: "სწრაფი და საიმედო ავია გადაზიდვა",
     serv_air_li1: "ექსპრეს მიწოდება",
@@ -118,7 +102,6 @@ const translations = {
     serv_air_li3: "სახიფათო ტვირთების გადაზიდვა",
     serv_air_li4: "რეალურ დროში მონიტორინგი",
 
-    // სარკინიგზო
     serv_rail_title: "სარკინიგზო გადაზიდვა",
     serv_rail_desc: "ეფექტური სარკინიგზო ტრანსპორტი კონტინენტებს შორის",
     serv_rail_li1: "საკონტეინერო გადაზიდვა",
@@ -126,7 +109,6 @@ const translations = {
     serv_rail_li3: "საზღვრისკვეთა და მიწოდება",
     serv_rail_li4: "ბიუჯეტური გადაწყვეტილებები",
 
-    // სახმელეთო
     serv_road_title: "სახმელეთო გადაზიდვა",
     serv_road_desc: "მოქნილი მიწოდება კარიდან კარამდე",
     serv_road_li1: "ადგილობრივი და საერთაშორისო",
@@ -134,7 +116,6 @@ const translations = {
     serv_road_li3: "სპეციალიზებული ტრანსპორტი",
     serv_road_li4: "საბოლოო დანიშნულებამდე მიტანა",
 
-    // გალერეა
     gal_title: "გალერეა",
     gal_desc: "ჩვენი ოპერაციები მსოფლიოს მასშტაბით",
     gal_img1_title: "ტვირთის დატვირთვა",
@@ -150,7 +131,6 @@ const translations = {
     gal_img6_title: "ტვირთის ზედამხედველობა",
     gal_img6_desc: "დატვირთვის პროცესის მონიტორინგი",
 
-    // კონტაქტი
     cont_title: "დაგვიკავშირდით",
     cont_desc: "გაქვთ კითხვები? მოგვწერეთ ან დაგვირეკეთ.",
     cont_info_title: "საკონტაქტო ინფორმაცია",
@@ -158,7 +138,6 @@ const translations = {
     cont_phone_label: "ტელეფონი",
     cont_email_label: "ელ-ფოსტა",
 
-    // ფუტერი
     footer_contact_title: "კონტაქტი",
     footer_addr_val: "ფოთი, საქართველო",
     footer_links_title: "სასარგებლო ბმულები",
@@ -166,13 +145,11 @@ const translations = {
   },
 
   ru: {
-    // Навигация
     nav_home: "Главная",
     nav_about: "О нас",
     nav_links: "Ссылки",
     nav_blogs: "Блоги",
 
-    // Главная секция
     hero_title: "S&N LOGISTICS LLC",
     hero_subtitle: "Ваш надежный партнер в международных перевозках",
     hero_desc:
@@ -180,12 +157,10 @@ const translations = {
     btn_started: "Начать",
     btn_learn: "Подробнее",
 
-    // Сервисы
     serv_main_title: "Наши услуги",
     serv_main_desc:
       "Комплексные решения по доставке, адаптированные к вашим потребностям",
 
-    // Морские
     serv_sea_title: "Морские перевозки",
     serv_sea_desc: "Экономичная морская доставка больших объемов грузов",
     serv_sea_li1: "FCL и LCL перевозки",
@@ -193,7 +168,6 @@ const translations = {
     serv_sea_li3: "Таможенное оформление",
     serv_sea_li4: "Страхование грузов",
 
-    // Авиа
     serv_air_title: "Авиаперевозки",
     serv_air_desc: "Быстрая и надежная авиаперевозка срочных грузов",
     serv_air_li1: "Экспресс доставка",
@@ -201,7 +175,6 @@ const translations = {
     serv_air_li3: "Перевозка опасных грузов",
     serv_air_li4: "Отслеживание в реальном времени",
 
-    // ЖД
     serv_rail_title: "Ж/Д Перевозки",
     serv_rail_desc: "Эффективные железнодорожные перевозки через континенты",
     serv_rail_li1: "Контейнерные перевозки",
@@ -209,7 +182,6 @@ const translations = {
     serv_rail_li3: "Трансграничная доставка",
     serv_rail_li4: "Выгодные решения",
 
-    // Авто
     serv_road_title: "Автоперевозки",
     serv_road_desc: "Гибкая доставка от двери до двери",
     serv_road_li1: "Местные и международные",
@@ -217,7 +189,6 @@ const translations = {
     serv_road_li3: "Специализированный транспорт",
     serv_road_li4: "Доставка последней мили",
 
-    // Галерея
     gal_title: "Галерея",
     gal_desc: "Наши операции по всему миру",
     gal_img1_title: "Погрузка груза",
@@ -233,7 +204,6 @@ const translations = {
     gal_img6_title: "Контроль груза",
     gal_img6_desc: "Мониторинг процесса погрузки",
 
-    // Контакты
     cont_title: "Связаться с нами",
     cont_desc: "Есть вопросы? Мы будем рады ответить.",
     cont_info_title: "Контактная информация",
@@ -241,7 +211,6 @@ const translations = {
     cont_phone_label: "Телефон",
     cont_email_label: "Email",
 
-    // Футер
     footer_contact_title: "Контакты",
     footer_addr_val: "Поти, Грузия",
     footer_links_title: "Полезные ссылки",
@@ -249,41 +218,30 @@ const translations = {
   },
 };
 
-// 2. ელემენტის წამოღება (Select)
 const languageSelect = document.getElementById("select-leng");
 
-// 3. ფუნქცია ენის შესაცვლელად
 function changeLanguage(lang) {
-  // 1. ვპოულობთ ყველა ელემენტს, რომელსაც აქვს data-key
   const elements = document.querySelectorAll("[data-key]");
 
-  // 2. გადავურბენთ თითოეულ ელემენტს
   elements.forEach((element) => {
     const key = element.getAttribute("data-key");
 
-    // 3. ვამოწმებთ თუ არსებობს თარგმანი ამ გასაღებისთვის
     if (translations[lang] && translations[lang][key]) {
       element.innerText = translations[lang][key];
     }
   });
 
-  // 4. ვინახავთ არჩევანს ბრაუზერის მეხსიერებაში
   localStorage.setItem("selectedLanguage", lang);
 }
 
-// 4. ივენთ ლისენერი (როცა სელექტს ცვლიან)
 languageSelect.addEventListener("change", (event) => {
   changeLanguage(event.target.value);
 });
 
-// 5. გვერდის ჩატვირთვისას (შემოწმება)
 document.addEventListener("DOMContentLoaded", () => {
-  // ვნახულობთ არის თუ არა შენახული ენა, თუ არა და დეფოლტად 'en'
   const savedLang = localStorage.getItem("selectedLanguage") || "en";
 
-  // სელექტს ვაყენებთ შენახულ ენაზე
   languageSelect.value = savedLang;
 
-  // ვუშვებთ ფუნქციას
   changeLanguage(savedLang);
 });
