@@ -19,10 +19,12 @@
           id="burger-menu"
         />
         <div class="link">
-          <a href="/index.html">Home</a>
-          <a href="#" style="text-decoration: underline">About Us</a>
-          <a href="Links.html">Links</a>
-          <a href="Blogs.html">Blogs</a>
+          <a href="/index.html" data-key="nav_home">Home</a>
+          <a href="#" style="text-decoration: underline" data-key="nav_about"
+            >About Us</a
+          >
+          <a href="Links.html" data-key="nav_links">Links</a>
+          <a href="Blogs.html" data-key="nav_blogs">Blogs</a>
         </div>
 
         <div class="leng">
@@ -31,15 +33,97 @@
             alt=""
           />
           <select name="" id="select-leng">
-            <option value="">Geo</option>
-            <option value="" selected>Eng</option>
-            <option value="">Rus</option>
+            <option value="ka">Geo</option>
+            <option value="en" selected>Eng</option>
+            <option value="ru">Rus</option>
           </select>
         </div>
       </div>
     </header>
 
-    <main></main>
+    <main class="about-us">
+      <div class="about">
+        <img src="/images/image.png" alt="" />
+        <div>
+          <h2 data-key="about_main_title">About Us</h2>
+          <p data-key="about_main_desc">
+            S&N LOGISTICS LLC is a dynamic and rapidly growing logistics company
+            based in Poti, Georgia. We specialize in providing comprehensive
+            shipping and logistics solutions to clients across the globe. Our
+            mission is to simplify the complexities of international trade by
+            offering reliable, efficient, and cost-effective services tailored
+            to meet the unique needs of each customer.
+          </p>
+          <a href="/index.html#contacts">
+            <button class="contact-btn" data-key="contact_btn">
+              contact us
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="our-skills">
+        <div class="skills-text">
+          <h2 data-key="our_skills_title">Our Skills</h2>
+          <p data-key="our_skills_desc">
+            At S&N LOGISTICS LLC, we understand that every shipment matters.
+            That’s why we’ve built our reputation on reliability, transparency,
+            and unparalleled customer service. From the moment you contact us to
+            the final delivery, our dedicated team works tirelessly to ensure your
+            goods arrive safely and on time.
+          </p>
+        </div>
+        <div class="skills-diagrams">
+          <div class="skill-bar">
+            <div class="skill-info">
+              <span data-key="skill_1">On-Time Delivery</span>
+              <span>98%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-fill" style="width: 98%;"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-info">
+              <span data-key="skill_2">Global Coverage</span>
+              <span>95%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-fill" style="width: 95%;"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-info">
+              <span data-key="skill_3">Customer Satisfaction</span>
+              <span>99%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-fill" style="width: 99%;"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-info">
+              <span data-key="skill_4">Customs Clearance</span>
+              <span>92%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-fill" style="width: 92%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-choose">
+        <h2 data-key="why_choose_title">Why Choose S&N LOGISTICS LLC?</h2>
+        <p data-key="why_choose_desc">
+          At S&N LOGISTICS LLC, we understand that every shipment matters.
+          That’s why we’ve built our reputation on reliability, transparency,
+          and unparalleled customer service. From the moment you contact us to
+          the final delivery, our dedicated team works tirelessly to ensure your
+          goods arrive safely and on time.
+        </p>
+      </div>
+    </main>
 
     <footer>
       <div class="top">
@@ -52,17 +136,19 @@
           </div>
           <div class="second">
             <h2>S&N LOGISTICS LLC</h2>
-            <p>Your Trusted Partner in International Shipping</p>
+            <p data-key="hero_subtitle">
+              Your Trusted Partner in International Shipping
+            </p>
           </div>
         </div>
 
         <div class="center">
-          <h3>Contact</h3>
+          <h3 data-key="footer_contact_title">Contact</h3>
           <p>
             <img
               src="/images/icons/location_on_24dp_D1D5DB_FILL0_wght400_GRAD0_opsz24.svg"
               alt=""
-            />Poti, Georgia
+            /><span data-key="footer_addr_val">Poti, Georgia</span>
           </p>
           <p>
             <img
@@ -79,17 +165,19 @@
         </div>
 
         <div class="right">
-          <h3>Useful Links</h3>
-          <a href="/index.html">Home</a>
-          <a href="Links.html">Liks</a>
-          <a href="Blogs.html">Blogs</a>
+          <h3 data-key="footer_links_title">Useful Links</h3>
+          <a href="/index.html" data-key="nav_home">Home</a>
+          <a href="Links.html" data-key="nav_links">Links</a>
+          <a href="Blogs.html" data-key="nav_blogs">Blogs</a>
         </div>
       </div>
       <div class="bottom">
-        <p>© 2026 S&N Logistics LLC. All rights reserved.</p>
+        <p data-key="footer_rights">
+          © 2026 S&N Logistics LLC. All rights reserved.
+        </p>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
