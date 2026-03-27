@@ -746,37 +746,6 @@ footer .top .right a:hover {
   text-decoration: underline;
 }
 
-footer .inov {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 25px 30px;
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-footer .inov p {
-  font-size: 0.95rem;
-  color: #9ca3af;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: color 0.3s ease;
-  text-transform: capitalize;
-}
-
-
-footer .inov p::before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  background-color: #3b82f6;
-  border-radius: 50%;
-  box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
-}
-
 footer .bottom {
   width: 80%;
   display: flex;
