@@ -10,7 +10,7 @@ const translations = {
     hero_desc:
       "We provide comprehensive logistics solutions for air, sea, rail, and road freight worldwide.",
     btn_started: "Get Started",
-    btn_learn: "Learn More",
+    btn_learn: "About Our Company",
 
     serv_main_title: "Our Services",
     serv_main_desc: "Comprehensive shipping solutions tailored to your needs",

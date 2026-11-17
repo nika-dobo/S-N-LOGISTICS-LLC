@@ -48,6 +48,7 @@ header .logo-box {
 
 header .logo-box .logo {
   width: 120px;
+  height: auto;
 }
 
 header .Links {
@@ -705,6 +706,7 @@ footer .top .left .logo-box {
 
 footer .top .left .logo-box img {
   width: 120px;
+  height: auto;
 }
 
 footer .top .left .second {
