@@ -19,14 +19,17 @@ body {
 }
 
 header {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   width: 100%;
   height: 85px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
-  border-bottom: 1px solid #00000038;
+  padding: 0 32px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -283,7 +286,7 @@ main {
 }
 
 .s-1 .hero-content h1 {
-  font-size: 4.5rem;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
   color: #ffffff;
   font-weight: 800;
   line-height: 1.1;
@@ -292,13 +295,13 @@ main {
 }
 
 .s-1 .hero-content h2 {
-  font-size: 1.8rem;
+  font-size: clamp(1.15rem, 2.2vw, 1.8rem);
   color: #93c5fd;
   font-weight: 600;
 }
 
 .s-1 .hero-content p {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
   color: #e2e8f0;
   max-width: 650px;
   line-height: 1.6;
@@ -362,13 +365,14 @@ main {
 
 .servise h1,
 .servise h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   color: #0f172a;
   position: relative;
   padding-bottom: 15px;
   font-weight: 800;
   display: inline-block;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .servise h1::after,
@@ -523,13 +527,14 @@ main {
 
 .Gallery h1,
 .Gallery h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   color: #0f172a;
   position: relative;
   padding-bottom: 15px;
   font-weight: 800;
   display: inline-block;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .Gallery h1::after,
@@ -673,13 +678,14 @@ main {
 
 .contacts h1,
 .contacts h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   color: #0f172a;
   position: relative;
   padding-bottom: 15px;
   font-weight: 800;
   display: inline-block;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .contacts h1::after,
@@ -794,8 +800,9 @@ main {
 
 .contacts .main .left .box .info p {
   font-size: 1rem;
-  color: #64748b;
+  color: #475569;
   line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
 footer {
@@ -1537,6 +1544,25 @@ main .blog-article .back-btn:hover {
   header .Links div.leng {
     margin-left: 0;
   }
+  .picture div h3,
+  .picture div h4,
+  .picture div p {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .contacts .main {
+    padding: 24px 18px;
+    gap: 28px;
+  }
+  .contacts .main .left {
+    max-width: 100%;
+    padding: 28px 20px;
+    gap: 20px;
+  }
+  .contacts .main iframe {
+    min-width: 0;
+    width: 100%;
+  }
 }
 
 @media (max-width: 750px) {
@@ -1545,28 +1571,59 @@ main .blog-article .back-btn:hover {
   }
 
   .contacts .main iframe {
-    min-height: 350px;
+    min-height: 320px;
+  }
+
+  footer .top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 36px;
+  }
+
+  footer .top .left,
+  footer .top .center,
+  footer .top .right {
+    align-items: center;
+  }
+
+  footer .top .center p {
+    justify-content: center;
   }
 }
 
 @media (max-width: 500px) {
   header {
-    padding: 0 10px 0px 0px;
+    padding: 0 14px;
+    height: 76px;
+  }
+  header .link {
+    top: 76px;
   }
   header .logo-box {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   header .logo-box .logo {
-    width: 90px;
+    width: 82px;
+  }
+  .servise {
+    margin-top: 60px;
+  }
+  .Gallery {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    padding: 0 16px;
+  }
+  .contacts {
+    margin-bottom: 70px;
+    gap: 24px;
+  }
+  .contacts > p {
+    margin-bottom: 10px;
   }
   .s-1 .hero-content {
-    padding: 40px 20px;
-  }
-  .s-1 .hero-content h1 {
-    font-size: 2.8rem;
-  }
-  .s-1 .hero-content h2 {
-    font-size: 1.3rem;
+    padding: 36px 20px;
+    border-radius: 22px;
   }
   .s-1 .hero-buttons {
     flex-direction: column;
