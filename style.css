@@ -86,6 +86,7 @@ header .Links div {
 }
 
 header .Links .leng {
+  position: relative;
   gap: 6px;
   padding: 7px 14px;
   background-color: #f8fafc;
@@ -93,6 +94,7 @@ header .Links .leng {
   border-radius: 9999px;
   box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 header .Links .leng:hover {
@@ -100,6 +102,7 @@ header .Links .leng:hover {
   border-color: #93c5fd;
 }
 
+header .Links .leng.open,
 header .Links .leng:focus-within {
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
@@ -109,6 +112,99 @@ header .Links .leng img {
   width: 18px;
   height: 18px;
   opacity: 0.8;
+}
+
+header .Links .leng.custom-ready #select-leng {
+  display: none;
+}
+
+header .Links .lang-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+  outline: none;
+}
+
+header .Links .lang-chevron {
+  transition: transform 0.2s ease;
+  color: #475569;
+}
+
+header .Links .leng.open .lang-chevron {
+  transform: rotate(180deg);
+  color: #2563eb;
+}
+
+header .Links .lang-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 155px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 6px;
+  list-style: none;
+  box-shadow: 0 12px 30px -6px rgba(15, 23, 42, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px) scale(0.97);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+  z-index: 100;
+}
+
+header .Links .leng.open .lang-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+header .Links .lang-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: 9px;
+  font-size: 0.92rem;
+  color: #0f172a;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+header .Links .lang-option:hover,
+header .Links .lang-option:focus {
+  background-color: #f1f5f9;
+  outline: none;
+}
+
+header .Links .lang-option.active {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+header .Links .lang-code {
+  font-weight: 700;
+}
+
+header .Links .lang-name {
+  font-size: 0.82rem;
+  color: #475569;
+}
+
+header .Links .lang-option.active .lang-name {
+  color: #2563eb;
 }
 
 header .Links #select-leng {

@@ -463,4 +463,81 @@ document.addEventListener("DOMContentLoaded", () => {
       navLink.classList.toggle("active");
     });
   }
+
+  const lengBox = document.querySelector(".leng");
+  if (lengBox && languageSelect) {
+    const labels = { ka: "Geo", en: "Eng", ru: "Rus" };
+    const fullNames = { ka: "ქართული", en: "English", ru: "Русский" };
+
+    const trigger = document.createElement("button");
+    trigger.type = "button";
+    trigger.className = "lang-trigger";
+    trigger.setAttribute("aria-haspopup", "listbox");
+    trigger.setAttribute("aria-expanded", "false");
+    trigger.setAttribute("aria-label", "Select language");
+    trigger.innerHTML = `<span class="lang-current">${labels[savedLang] || "Eng"}</span><svg class="lang-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+
+    const menu = document.createElement("ul");
+    menu.className = "lang-menu";
+    menu.setAttribute("role", "listbox");
+    menu.setAttribute("aria-label", "Languages");
+
+    Object.entries(labels).forEach(([code, shortLabel]) => {
+      const item = document.createElement("li");
+      item.className = "lang-option" + (code === savedLang ? " active" : "");
+      item.setAttribute("role", "option");
+      item.setAttribute("tabindex", "0");
+      item.setAttribute("data-value", code);
+      item.setAttribute("aria-selected", code === savedLang ? "true" : "false");
+      item.innerHTML = `<span class="lang-code">${shortLabel}</span><span class="lang-name">${fullNames[code]}</span>`;
+
+      const selectLang = () => {
+        languageSelect.value = code;
+        changeLanguage(code);
+        trigger.querySelector(".lang-current").textContent = shortLabel;
+        menu.querySelectorAll(".lang-option").forEach((opt) => {
+          const isMatch = opt.getAttribute("data-value") === code;
+          opt.classList.toggle("active", isMatch);
+          opt.setAttribute("aria-selected", isMatch ? "true" : "false");
+        });
+        lengBox.classList.remove("open");
+        trigger.setAttribute("aria-expanded", "false");
+      };
+
+      item.addEventListener("click", selectLang);
+      item.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          selectLang();
+        }
+      });
+
+      menu.appendChild(item);
+    });
+
+    lengBox.classList.add("custom-ready");
+    lengBox.appendChild(trigger);
+    lengBox.appendChild(menu);
+
+    trigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = lengBox.classList.toggle("open");
+      trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!lengBox.contains(e.target)) {
+        lengBox.classList.remove("open");
+        trigger.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lengBox.classList.contains("open")) {
+        lengBox.classList.remove("open");
+        trigger.setAttribute("aria-expanded", "false");
+        trigger.focus();
+      }
+    });
+  }
 });
