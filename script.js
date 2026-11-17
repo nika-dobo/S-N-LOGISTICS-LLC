@@ -490,6 +490,92 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
+  const galleryCards = Array.from(document.querySelectorAll(".Gallery .picture > div"));
+  if (galleryCards.length > 0) {
+    let currentIndex = 0;
+
+    const lightbox = document.createElement("div");
+    lightbox.className = "gallery-lightbox";
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.setAttribute("aria-label", "Image preview");
+    lightbox.innerHTML = `
+      <div class="lightbox-card">
+        <div class="lightbox-media">
+          <button type="button" class="lightbox-close" aria-label="Close preview">&#10005;</button>
+          <button type="button" class="lightbox-nav lightbox-prev" aria-label="Previous image">&#8249;</button>
+          <img src="" alt="" />
+          <button type="button" class="lightbox-nav lightbox-next" aria-label="Next image">&#8250;</button>
+        </div>
+        <div class="lightbox-info">
+          <div>
+            <h3></h3>
+            <p></p>
+          </div>
+          <span class="lightbox-counter"></span>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(lightbox);
+
+    const lbImg = lightbox.querySelector(".lightbox-media img");
+    const lbTitle = lightbox.querySelector(".lightbox-info h3");
+    const lbDesc = lightbox.querySelector(".lightbox-info p");
+    const lbCounter = lightbox.querySelector(".lightbox-counter");
+
+    const showSlide = (idx) => {
+      currentIndex = (idx + galleryCards.length) % galleryCards.length;
+      const card = galleryCards[currentIndex];
+      const img = card.querySelector("img");
+      const title = card.querySelector("h3, h4");
+      const desc = card.querySelector("p");
+
+      lbImg.src = img ? img.getAttribute("src") : "";
+      lbImg.alt = img ? img.getAttribute("alt") || "" : "";
+      lbTitle.textContent = title ? title.textContent : "";
+      lbDesc.textContent = desc ? desc.textContent : "";
+      lbCounter.textContent = `${currentIndex + 1} / ${galleryCards.length}`;
+    };
+
+    const openLightbox = (idx) => {
+      showSlide(idx);
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove("open");
+      document.body.style.overflow = "";
+    };
+
+    galleryCards.forEach((card, idx) => {
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("role", "button");
+      card.addEventListener("click", () => openLightbox(idx));
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openLightbox(idx);
+        }
+      });
+    });
+
+    lightbox.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
+    lightbox.querySelector(".lightbox-prev").addEventListener("click", () => showSlide(currentIndex - 1));
+    lightbox.querySelector(".lightbox-next").addEventListener("click", () => showSlide(currentIndex + 1));
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (!lightbox.classList.contains("open")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") showSlide(currentIndex - 1);
+      if (e.key === "ArrowRight") showSlide(currentIndex + 1);
+    });
+  }
+
   const lengBox = document.querySelector(".leng");
   if (lengBox && languageSelect) {
     const labels = { ka: "Geo", en: "Eng", ru: "Rus" };
