@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/style.css?v=7" />
+    <link rel="stylesheet" href="/style.css?v=12" />
   </head>
   <body>
     <header>
@@ -66,63 +66,75 @@
         </div>
       </div>
     </header>
-
     <main>
-      <section class="servise" style="margin-top: 50px; margin-bottom: 50px">
-        <h1 data-key="links_main_title">Useful Resources</h1>
-        <p class="info" data-key="links_main_desc">
-          Explore our essential guides and specifications for international
-          shipping.
-        </p>
+      <section class="resources-page">
+        <div class="section-head">
+          <h1 data-key="links_main_title">Useful Resources</h1>
+          <p data-key="links_main_desc">
+            Explore our essential guides and specifications for international
+            shipping.
+          </p>
+        </div>
 
-        <div class="main">
-          <div class="box">
-            <div>
+        <div class="resources-list">
+          <article class="resource-row">
+            <div class="resource-thumb">
               <img
-                src="/images/icons/public_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                alt=""
-                style="
-                  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.3));
-                  width: 35px;
-                "
+                src="/images/incoterms_hero.png"
+                alt="Understanding Incoterms 2020"
+                loading="lazy"
+                decoding="async"
               />
             </div>
-            <h3 data-key="link_incoterms_title">Incoterms</h3>
-            <p data-key="link_incoterms_desc">
-              Comprehensive guide to International Commercial Terms (FOB, CIF,
-              EXW, etc.) and understanding buyer/seller responsibilities.
-            </p>
-            <a
-              href="links pages/link1.html"
-              class="link-btn"
-              data-key="btn_view_incoterms"
-              >View Incoterms</a
-            >
-          </div>
+            <div class="resource-info">
+              <div class="resource-tags">
+                <span>FOB</span>
+                <span>CIF</span>
+                <span>EXW</span>
+              </div>
+              <h2 data-key="link_incoterms_title">Incoterms</h2>
+              <p data-key="link_incoterms_desc">
+                Comprehensive guide to International Commercial Terms (FOB, CIF,
+                EXW, etc.) and understanding buyer/seller responsibilities.
+              </p>
+              <a
+                href="links pages/link1.html"
+                class="link-btn"
+                data-key="btn_view_incoterms"
+                >View Incoterms</a
+              >
+            </div>
+          </article>
 
-          <div class="box">
-            <div>
+          <article class="resource-row">
+            <div class="resource-thumb">
               <img
-                src="/images/icons/directions_boat_24dp_2563EB_FILL0_wght400_GRAD0_opsz24.svg"
-                alt=""
-                style="
-                  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.3));
-                  width: 35px;
-                "
+                src="/images/containers_hero.png"
+                alt="Global Shipping Container Specifications"
+                loading="lazy"
+                decoding="async"
               />
             </div>
-            <h3 data-key="link_containers_title">Container Specifications</h3>
-            <p data-key="link_containers_desc">
-              Detailed dimensions, capacities, and types of shipping containers
-              (20ft, 40ft, HQ, Open Top, Reefer) to plan your cargo loading.
-            </p>
-            <a
-              href="links pages/link2.html"
-              class="link-btn"
-              data-key="btn_view_containers"
-              >View Containers</a
-            >
-          </div>
+            <div class="resource-info">
+              <div class="resource-tags">
+                <span>20ft Dry</span>
+                <span>40ft Dry</span>
+                <span>40HC</span>
+              </div>
+              <h2 data-key="link_containers_title">Container Specifications</h2>
+              <p data-key="link_containers_desc">
+                Detailed dimensions, capacities, and types of shipping
+                containers (20ft, 40ft, HQ, Open Top, Reefer) to plan your cargo
+                loading.
+              </p>
+              <a
+                href="links pages/link2.html"
+                class="link-btn"
+                data-key="btn_view_containers"
+                >View Containers</a
+              >
+            </div>
+          </article>
         </div>
       </section>
     </main>
@@ -182,6 +194,6 @@
       </div>
     </footer>
 
-    <script src="/script.js?v=7" defer></script>
+    <script src="/script.js?v=12" defer></script>
   </body>
 </html>

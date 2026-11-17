@@ -511,7 +511,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const revealTargets = document.querySelectorAll(
-    ".servise .main .box, .blog-card, .choose-card, .about, .our-skills, .contacts .main",
+    ".servise .main .box, .resource-row, .blog-card, .choose-card, .about, .our-skills, .contacts .main",
   );
   if (revealTargets.length > 0 && "IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
