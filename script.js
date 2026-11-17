@@ -459,10 +459,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLink = document.querySelector(".link");
 
   if (burgerMenu && navLink) {
-    burgerMenu.addEventListener("click", () => {
+    const toggleMenu = () => {
       navLink.classList.toggle("active");
+    };
+    burgerMenu.addEventListener("click", toggleMenu);
+    burgerMenu.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggleMenu();
+      }
     });
   }
+
+  const backToTop = document.createElement("button");
+  backToTop.type = "button";
+  backToTop.className = "back-to-top";
+  backToTop.setAttribute("aria-label", "Back to top");
+  backToTop.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>`;
+  document.body.appendChild(backToTop);
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      backToTop.classList.toggle("visible", window.scrollY > 360);
+    },
+    { passive: true },
+  );
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
   const lengBox = document.querySelector(".leng");
   if (lengBox && languageSelect) {
