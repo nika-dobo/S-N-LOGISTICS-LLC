@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -108,7 +107,7 @@ main {
   justify-content: center;
   padding: 50px 20px;
   position: relative;
-  background: url("https://i.pinimg.com/736x/42/df/49/42df4989b2688fd76cea4710db5e1734.jpg")
+  background: url("images/hero-bg.webp")
     center/cover no-repeat;
   isolation: isolate;
   background-attachment: fixed;
@@ -184,7 +183,7 @@ main {
   margin-top: 20px;
 }
 
-.s-1 .hero-buttons button {
+.s-1 .hero-buttons a {
   padding: 16px 40px;
   border-radius: 50px;
   border: none;
@@ -194,28 +193,31 @@ main {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
-.s-1 .hero-buttons a:first-child button {
+.s-1 .hero-buttons a:first-child {
   background: linear-gradient(135deg, #2563eb, #3b82f6);
   color: #fff;
   box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.5);
 }
 
-.s-1 .hero-buttons a:first-child button:hover {
+.s-1 .hero-buttons a:first-child:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 25px -5px rgba(37, 99, 235, 0.6);
 }
 
-.s-1 .hero-buttons a:last-of-type button {
-  background: rgba(255, 255, 255, 0.05);
+.s-1 .hero-buttons a:last-of-type {
+  background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   color: #ffffff;
 }
 
-.s-1 .hero-buttons a:last-of-type button:hover {
-  background: rgba(255, 255, 255, 0.2);
+.s-1 .hero-buttons a:last-of-type:hover {
+  background: rgba(255, 255, 255, 0.25);
   transform: translateY(-5px);
 }
 
@@ -229,7 +231,8 @@ main {
   max-width: 1200px;
 }
 
-.servise h1 {
+.servise h1,
+.servise h2 {
   font-size: 3rem;
   color: #0f172a;
   position: relative;
@@ -239,7 +242,8 @@ main {
   letter-spacing: -0.02em;
 }
 
-.servise h1::after {
+.servise h1::after,
+.servise h2::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -253,7 +257,7 @@ main {
 
 .servise .info {
   font-size: 1.15rem;
-  color: #64748b;
+  color: #334155;
   margin-bottom: 60px;
   text-align: center;
   max-width: 600px;
@@ -388,7 +392,8 @@ main {
   max-width: 1200px;
 }
 
-.Gallery h1 {
+.Gallery h1,
+.Gallery h2 {
   font-size: 3rem;
   color: #0f172a;
   position: relative;
@@ -398,7 +403,8 @@ main {
   letter-spacing: -0.02em;
 }
 
-.Gallery h1::after {
+.Gallery h1::after,
+.Gallery h2::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -412,7 +418,7 @@ main {
 
 .Gallery p {
   font-size: 1.15rem;
-  color: #64748b;
+  color: #334155;
   margin-top: 20px;
 }
 
@@ -482,6 +488,7 @@ main {
   opacity: 0.8;
 }
 
+.picture div h3,
 .picture div h4 {
   font-size: 1.6rem;
   font-weight: 700;
@@ -500,6 +507,7 @@ main {
   transition: all 0.4s ease;
 }
 
+.picture div:hover h3,
 .picture div:hover h4,
 .picture div:hover p {
   transform: translateY(0);
@@ -534,7 +542,8 @@ main {
   padding: 0 20px;
 }
 
-.contacts h1 {
+.contacts h1,
+.contacts h2 {
   font-size: 3rem;
   color: #0f172a;
   position: relative;
@@ -544,7 +553,8 @@ main {
   letter-spacing: -0.02em;
 }
 
-.contacts h1::after {
+.contacts h1::after,
+.contacts h2::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -558,7 +568,7 @@ main {
 
 .contacts > p {
   font-size: 1.15rem;
-  color: #64748b;
+  color: #334155;
   margin-bottom: 40px;
   text-align: center;
 }
@@ -599,7 +609,8 @@ main {
   border: 1px solid #e2e8f0;
 }
 
-.contacts .main .left h2 {
+.contacts .main .left h2,
+.contacts .main .left h3 {
   font-size: 1.8rem;
   color: #0f172a;
   font-weight: 700;
@@ -1354,6 +1365,9 @@ main .blog-article .back-btn:hover {
 }
 
 @media (max-width: 900px) {
+  .s-1 {
+    background-attachment: scroll;
+  }
   header .link {
     position: absolute;
     top: 85px;
@@ -1429,9 +1443,6 @@ main .blog-article .back-btn:hover {
     width: 100%;
   }
   .s-1 .hero-buttons a {
-    width: 100%;
-  }
-  .s-1 .hero-buttons button {
     width: 100%;
   }
   .leng {

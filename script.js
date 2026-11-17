@@ -434,10 +434,11 @@ function changeLanguage(lang) {
     const key = element.getAttribute("data-key");
 
     if (translations[lang] && translations[lang][key]) {
-      element.innerText = translations[lang][key];
+      element.textContent = translations[lang][key];
     }
   });
 
+  document.documentElement.lang = lang;
   localStorage.setItem("selectedLanguage", lang);
 }
 
@@ -450,7 +451,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   languageSelect.value = savedLang;
 
-  changeLanguage(savedLang);
+  if (savedLang !== "en") {
+    changeLanguage(savedLang);
+  }
 
   const burgerMenu = document.getElementById("burger-menu");
   const navLink = document.querySelector(".link");

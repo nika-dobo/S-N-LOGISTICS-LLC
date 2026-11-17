@@ -28,20 +28,22 @@
       property="og:image"
       content="https://s-n-logistics-llc.vercel.app/images/logo.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <header>
       <a href="/index.html" class="logo-box">
-        <img class="logo" src="/images/logo.png" alt="" /> S&N LOGISTICS</a
+        <img class="logo" src="/images/logo.png" alt="S&amp;N Logistics logo" width="120" height="88" /> S&N LOGISTICS</a
       >
 
       <div class="Links">
         <img
           src="/images/icons/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
           alt=""
-          id="burger-menu"
-        />
+          id="burger-menu" role="button" tabindex="0" width="35" height="35" />
         <div class="link">
           <a href="/index.html" data-key="nav_home">Home</a>
           <a href="#" style="text-decoration: underline" data-key="nav_about"
@@ -56,7 +58,7 @@
             src="/images/icons/public_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
             alt=""
           />
-          <select name="" id="select-leng">
+          <select name="language" id="select-leng" aria-label="Select language">
             <option value="ka">Geo</option>
             <option value="en" selected>Eng</option>
             <option value="ru">Rus</option>
@@ -67,7 +69,7 @@
 
     <main class="about-us">
       <div class="about">
-        <img src="/images/image.png" alt="" />
+        <img src="/images/image.webp" alt="" />
         <div>
           <h2 data-key="about_main_title">About Us</h2>
           <p data-key="about_main_desc">
@@ -154,7 +156,7 @@
         <div class="left">
           <div class="first">
             <a href="#" class="logo-box">
-              <img class="logo" src="/images/logo.png" alt="" /> S&N
+              <img class="logo" src="/images/logo.png" alt="S&amp;N Logistics logo" width="120" height="88" /> S&N
               LOGISTICS</a
             >
           </div>
@@ -203,6 +205,6 @@
       </div>
     </footer>
 
-    <script src="/script.js"></script>
+    <script src="/script.js" defer></script>
   </body>
 </html>

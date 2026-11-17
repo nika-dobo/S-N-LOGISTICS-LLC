@@ -76,19 +76,50 @@
       }
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero-bg.webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      />
+    </noscript>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <a href="#" class="logo-box">
-        <img class="logo" src="images/logo.png" alt="" /> S&N LOGISTICS</a
+        <img
+          class="logo"
+          src="images/logo.png"
+          alt="S&amp;N Logistics logo"
+          width="120"
+          height="88"
+        />
+        S&amp;N LOGISTICS</a
       >
 
       <div class="Links">
         <img
           src="images/icons/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-          alt=""
+          alt="Toggle navigation menu"
           id="burger-menu"
+          role="button"
+          tabindex="0"
+          width="35"
+          height="35"
         />
         <div class="link">
           <a href="#" style="text-decoration: underline" data-key="nav_home"
@@ -103,8 +134,10 @@
           <img
             src="images/icons/public_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
             alt=""
+            width="24"
+            height="24"
           />
-          <select name="" id="select-leng">
+          <select name="language" id="select-leng" aria-label="Select language">
             <option value="ka">Geo</option>
             <option value="en" selected>Eng</option>
             <option value="ru">Rus</option>
@@ -125,22 +158,22 @@
             road freight worldwide.
           </p>
           <div class="hero-buttons">
-            <a href="#contacts"
-              ><button class="btn-primary" data-key="btn_started">
-                Get Started
-              </button></a
+            <a href="#contacts" class="btn-primary" data-key="btn_started">
+              Get Started
+            </a>
+            <a
+              href="webs/AboutUs.html"
+              class="btn-secondary"
+              data-key="btn_learn"
             >
-            <a href="webs/AboutUs.html"
-              ><button class="btn-secondary" data-key="btn_learn">
-                Learn More
-              </button></a
-            >
+              Learn More
+            </a>
           </div>
         </div>
       </section>
 
       <section class="servise" style="padding: 0px 10px">
-        <h1 data-key="serv_main_title">Our Services</h1>
+        <h2 data-key="serv_main_title">Our Services</h2>
         <p class="info" data-key="serv_main_desc">
           Comprehensive shipping solutions tailored to your needs
         </p>
@@ -225,73 +258,97 @@
       </section>
 
       <section class="Gallery" style="padding: 0px 10px">
-        <h1 data-key="gal_title">Gallery</h1>
+        <h2 data-key="gal_title">Gallery</h2>
         <p data-key="gal_desc">Our operations around the world</p>
 
         <div class="picture">
           <div>
             <img
-              src="images/WhatsApp Image 2026-01-27 at 12.43.53 AM.jpeg"
-              alt=""
+              src="images/gallery-1.webp"
+              alt="Cargo loading and secure packaging operations"
+              width="800"
+              height="1067"
+              loading="lazy"
+              decoding="async"
             />
-            <h4 data-key="gal_img1_title">Cargo Loading</h4>
+            <h3 data-key="gal_img1_title">Cargo Loading</h3>
             <p data-key="gal_img1_desc">Secure packaging solutions</p>
           </div>
 
           <div>
             <img
-              src="images/WhatsApp Image 2026-01-27 at 12.43.54 AM.jpeg"
-              alt=""
+              src="images/gallery-2.webp"
+              alt="Container stuffing and cargo handling"
+              width="800"
+              height="1067"
+              loading="lazy"
+              decoding="async"
             />
-            <h4 data-key="gal_img2_title">Container Stuffing</h4>
+            <h3 data-key="gal_img2_title">Container Stuffing</h3>
             <p data-key="gal_img2_desc">Professional cargo handling</p>
           </div>
 
           <div>
             <img
-              src="images/WhatsApp Image 2026-01-27 at 12.43.54 AM (1).jpeg"
-              alt=""
+              src="images/gallery-3.webp"
+              alt="Cargo quality and safety inspection"
+              width="800"
+              height="1067"
+              loading="lazy"
+              decoding="async"
             />
-            <h4 data-key="gal_img3_title">Quality Inspection</h4>
+            <h3 data-key="gal_img3_title">Quality Inspection</h3>
             <p data-key="gal_img3_desc">Safety and compliance checks</p>
           </div>
 
           <div>
             <img
-              src="images/WhatsApp Image 2026-01-27 at 12.58.48 AM.jpeg"
-              alt=""
+              src="images/gallery-4.webp"
+              alt="Heavy equipment and specialized machinery transport"
+              width="800"
+              height="450"
+              loading="lazy"
+              decoding="async"
             />
-            <h4 data-key="gal_img4_title">Heavy Equipment Transport</h4>
+            <h3 data-key="gal_img4_title">Heavy Equipment Transport</h3>
             <p data-key="gal_img4_desc">Specialized machinery shipping</p>
           </div>
 
           <div>
             <img
-              src="images/WhatsApp Image 2026-01-27 at 12.48.34 AM.jpeg"
-              alt=""
+              src="images/gallery-5.webp"
+              alt="Vehicle logistics and automobile transportation"
+              width="721"
+              height="1600"
+              loading="lazy"
+              decoding="async"
             />
-            <h4 data-key="gal_img5_title">Vehicle Logistics</h4>
+            <h3 data-key="gal_img5_title">Vehicle Logistics</h3>
             <p data-key="gal_img5_desc">Safe automobile transportation</p>
           </div>
 
           <div>
             <img
-              src="images/WhatsApp Image 2026-01-27 at 12.43.55 AM (1).jpeg"
-              alt=""
+              src="images/gallery-6.webp"
+              alt="Cargo loading supervision and monitoring"
+              width="800"
+              height="1067"
+              loading="lazy"
+              decoding="async"
             />
-            <h4 data-key="gal_img6_title">Cargo Supervision</h4>
+            <h3 data-key="gal_img6_title">Cargo Supervision</h3>
             <p data-key="gal_img6_desc">Expert loading monitoring</p>
           </div>
         </div>
       </section>
 
       <section class="contacts" id="contacts" style="padding: 0px 10px">
-        <h1 data-key="cont_title">Get in Touch</h1>
+        <h2 data-key="cont_title">Get in Touch</h2>
         <p data-key="cont_desc">Have questions? We'd love to hear from you.</p>
 
         <div class="main">
           <div class="left">
-            <h2 data-key="cont_info_title">Contact Information</h2>
+            <h3 data-key="cont_info_title">Contact Information</h3>
             <div class="box">
               <div class="img">
                 <img
@@ -327,12 +384,13 @@
               </div>
               <div class="info">
                 <h4 data-key="cont_email_label">Email</h4>
-                <p>snlogisticss504 @gmail.com</p>
+                <p>snlogisticss504@gmail.com</p>
               </div>
             </div>
           </div>
 
           <iframe
+            title="S&amp;N Logistics LLC location on Google Maps"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11384.290354164566!2d41.64316570077075!3d42.15441395830875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405db8f761243629%3A0x8797cfa4fd29f38c!2z0J_QvtGC0Lg!5e0!3m2!1sru!2sge!4v1769461596510!5m2!1sru!2sge"
             style="border: 0"
             allowfullscreen=""
@@ -348,7 +406,14 @@
         <div class="left">
           <div class="first">
             <a href="#" class="logo-box">
-              <img class="logo" src="images/logo.png" alt="" /> S&N LOGISTICS</a
+              <img
+                class="logo"
+                src="images/logo.png"
+                alt="S&amp;N Logistics logo"
+                width="120"
+                height="88"
+              />
+              S&amp;N LOGISTICS</a
             >
           </div>
           <div class="second">
@@ -396,6 +461,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
