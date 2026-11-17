@@ -490,6 +490,47 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
+  if (document.querySelector(".blog-article")) {
+    const progress = document.createElement("div");
+    progress.className = "reading-progress";
+    document.body.appendChild(progress);
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const pct =
+          docHeight > 0
+            ? Math.min(100, Math.max(0, (window.scrollY / docHeight) * 100))
+            : 0;
+        progress.style.width = `${pct}%`;
+      },
+      { passive: true },
+    );
+  }
+
+  const revealTargets = document.querySelectorAll(
+    ".servise .main .box, .blog-card, .choose-card, .about, .our-skills, .contacts .main",
+  );
+  if (revealTargets.length > 0 && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 },
+    );
+    revealTargets.forEach((el) => {
+      el.classList.add("reveal-item");
+      observer.observe(el);
+    });
+  }
+
   const galleryCards = Array.from(document.querySelectorAll(".Gallery .picture > div"));
   if (galleryCards.length > 0) {
     let currentIndex = 0;
