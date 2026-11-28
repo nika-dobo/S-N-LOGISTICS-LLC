@@ -961,6 +961,7 @@ main .about div {
   box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.08);
 }
 
+main .about div h1,
 main .about div h2,
 main .our-skills h2,
 main .why-choose h2 {
@@ -972,6 +973,7 @@ main .why-choose h2 {
   letter-spacing: -0.02em;
 }
 
+main .about div h1::after,
 main .about div h2::after,
 main .our-skills h2::after {
   content: "";
